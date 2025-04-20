@@ -11,68 +11,68 @@
 void init_menu(Menu *menu){
 
 
-menu->background_principale=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/background_principale1.png");
+menu->background_principale=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/background_principale1.png");
 if(menu->background_principale==NULL){
      printf("error load background principale");
 }
 //button jouer**********************************************************
-menu->jouer_btn[0]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/jouer0.png");
+menu->jouer_btn[0]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/jouer0.png");
 if (menu->jouer_btn[0] == NULL) {
     printf("Erreur chargement jouer0.png : %s\n", IMG_GetError());
 }
-menu->jouer_btn[1]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/jouer1.png");
+menu->jouer_btn[1]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/jouer1.png");
 if (menu->jouer_btn[1] == NULL) {
     printf("Erreur chargement jouer0.png : %s\n", IMG_GetError());
 }
 menu->posbutton_jouer.x=0;
-menu->posbutton_jouer.y=0;
+menu->posbutton_jouer.y=100;
 menu->posbutton_jouer.w=menu->jouer_btn[0]->w;
 menu->posbutton_jouer.h=menu->jouer_btn[0]->h;
 //button option**********************************************************
-menu->option_btn[0]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/option0.png");
+menu->option_btn[0]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/option0.png");
 if (menu->option_btn[0] == NULL) {
     printf("Erreur chargement option0.png : %s\n", IMG_GetError());
 }
-menu->option_btn[1]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/option1.png");
+menu->option_btn[1]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/option1.png");
 if (menu->option_btn[1] == NULL) {
     printf("Erreur chargement option0.png : %s\n", IMG_GetError());
 }
 menu->posbutton_option.x=0;
-menu->posbutton_option.y=200;
+menu->posbutton_option.y=320;
 menu->posbutton_option.w=menu->option_btn[0]->w;
 menu->posbutton_option.h=menu->option_btn[0]->h;
 //button meilleur**********************************************************
-menu->meilleur_btn[0]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/meilleur0.png");
+menu->meilleur_btn[0]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/meilleur0.png");
 if (menu->meilleur_btn[0] == NULL) {
     printf("Erreur chargement meilleur0.png : %s\n", IMG_GetError());
 }
-menu->meilleur_btn[1]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/meilleur1.png");
+menu->meilleur_btn[1]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/meilleur1.png");
 if (menu->meilleur_btn[1] == NULL) {
     printf("Erreur chargement meilleur0.png : %s\n", IMG_GetError());
 }
 menu->posbutton_meilleur.x=0;
-menu->posbutton_meilleur.y=400;
+menu->posbutton_meilleur.y=570;
 menu->posbutton_meilleur.w=menu->meilleur_btn[0]->w;
 menu->posbutton_meilleur.h=menu->meilleur_btn[0]->h;
 //button histoire**********************************************************
-menu->histoire_btn[0]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/histoire0.png");
+menu->histoire_btn[0]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/histoire0.png");
 if (menu->histoire_btn[0] == NULL) {
     printf("Erreur chargement histoire0.png : %s\n", IMG_GetError());
 }
-menu->histoire_btn[1]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/histoire1.png");
+menu->histoire_btn[1]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/histoire1.png");
 if (menu->histoire_btn[1] == NULL) {
     printf("Erreur chargement histoire1.png : %s\n", IMG_GetError());
 }
-menu->posbutton_histoire.x=0;
-menu->posbutton_histoire.y=600;
+menu->posbutton_histoire.x=1495;
+menu->posbutton_histoire.y=235;
 menu->posbutton_histoire.w=menu->histoire_btn[0]->w;
 menu->posbutton_histoire.h=menu->histoire_btn[0]->h;
 //button quit**********************************************************
-menu->quit_btn[0]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/quit0.png");
+menu->quit_btn[0]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/quit0.png");
 if (menu->quit_btn[0] == NULL) {
     printf("Erreur chargement quit0.png : %s\n", IMG_GetError());
 }
-menu->quit_btn[1]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/quit1.png");
+menu->quit_btn[1]=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/quit1.png");
 if (menu->quit_btn[1] == NULL) {
     printf("Erreur chargement quit0.png : %s\n", IMG_GetError());
 }
@@ -82,8 +82,8 @@ menu->posbutton_quit.w=menu->quit_btn[0]->w;
 menu->posbutton_quit.h=menu->quit_btn[0]->h;
 
 
-menu->music= Mix_LoadMUS("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/game_start.mp3");
-menu->font=TTF_OpenFont("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/BrownieStencil-8O8MJ.ttf",80);
+menu->music= Mix_LoadMUS("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/game_start.mp3");
+menu->font=TTF_OpenFont("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/BrownieStencil-8O8MJ.ttf",80);
 if (menu->title == NULL) {
         printf("Erreur rendu texte : %s\n", TTF_GetError());
     }
@@ -95,14 +95,14 @@ menu->postext.x=500;
 menu->postext.y=10;
 
 
-menu->logo=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/logo.jpeg");
+menu->logo=IMG_Load("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/logo.png");
 if(menu->logo==NULL){
 
      printf("error load logo");
 }
 menu->logo_pos.x=1694;
 menu->logo_pos.y=20;
-menu->sonclick = Mix_LoadWAV("/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/click.wav");
+menu->sonclick = Mix_LoadWAV("/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/click.wav");
 if (!menu->sonclick) {
     printf("Failed to load sound: %s\n", Mix_GetError());
     return;
@@ -113,7 +113,7 @@ if (!menu->sonclick) {
       menu->count = 0;
       for (int i = 0; i < 100; ++i) {
         char filename[256];
-        sprintf(filename, "/home/king/Documents/GitHub/sdl12-animation-engine/menu_principale HOUSSEM/assets/assets_menu_principale/gif/image%d.png", i + 1); // Assuming images are named image1.png, image2.png, etc.
+        sprintf(filename, "/home/king/Documents/GitHub/sdl12-animation-engine/assets/assets_menu_principale/gif/image%d.png", i + 1); // Assuming images are named image1.png, image2.png, etc.
         
         // Load the image and check if successful
         menu->images[menu->count] = IMG_Load(filename);
@@ -264,7 +264,93 @@ void misajour_menu(Menu *m) {
     prev_btn_select = m->btn_select;
 }
 
+void handle_menu_events(SDL_Event event, int *quitter, int *indice_ecran, Menu *menu)
+{
+    while (SDL_PollEvent(&event))
+    {
+        switch (event.type)
+        {
+            case SDL_QUIT:
+                *quitter = 1;
+                break;
 
+            case SDL_MOUSEBUTTONDOWN:
+                if (event.button.button == SDL_BUTTON_LEFT)
+                {
+                    if (menu->btn_select == 5)
+                    {
+                        *quitter = 1;
+                    }
+
+                    if (menu->btn_select == 1)
+                    {
+                        *indice_ecran = 1;
+                    }
+
+                    if (menu->btn_select == 2)
+                    {
+                        *indice_ecran = 2;
+                    }
+
+                    if (menu->btn_select == 3)
+                    {
+                        *indice_ecran = 3;
+                    }
+
+                    if (menu->btn_select == 4)
+                    {
+                        *indice_ecran = 4;
+                    }
+                }
+                break;
+
+            case SDL_KEYDOWN:
+                if (event.key.keysym.sym == SDLK_DOWN)
+                {
+                    menu->btn_select++;
+                    if (menu->btn_select > 5)
+                        menu->btn_select = 1;
+                }
+
+                if (event.key.keysym.sym == SDLK_UP)
+                {
+                    menu->btn_select--;
+                    if (menu->btn_select < 1)
+                        menu->btn_select = 5;
+                }
+
+                if (event.key.keysym.sym == SDLK_j ||
+                    (menu->btn_select == 1 && event.key.keysym.sym == SDLK_RETURN))
+                {
+                    *indice_ecran = 1;
+                }
+
+                if (event.key.keysym.sym == SDLK_o)
+                {
+                    *indice_ecran = 2;
+                }
+
+                if (event.key.keysym.sym == SDLK_m)
+                {
+                    *indice_ecran = 3;
+                }
+
+                if (event.key.keysym.sym == SDLK_h)
+                {
+                    *indice_ecran = 4;
+                }
+
+                if (event.key.keysym.sym == SDLK_q)
+                {
+                    *quitter = 1;
+                }
+                break;
+
+            default:
+                break;
+        }
+    }
+}
 
 
 

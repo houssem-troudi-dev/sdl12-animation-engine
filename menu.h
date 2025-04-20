@@ -58,7 +58,7 @@ int colision_avec_souris(SDL_Rect pos_btn);
 
 void misajour_menu(Menu *m);
 
-
+void handle_menu_events(SDL_Event event, int *quitter, int *indice_ecran, Menu *menu);
 
 
 

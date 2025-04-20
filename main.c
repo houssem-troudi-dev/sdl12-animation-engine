@@ -43,86 +43,12 @@ switch(indice_ecran)
 {
  case 0:
          //Menu principale
-         
-         //affichage 
           afficher_menu(&menu,Fenetre);
           SDL_Flip(Fenetre);
-        while(SDL_PollEvent(&event))
-            {
-                switch(event.type)
-                  {
-                  case SDL_QUIT:
-                        quitter=1;
-                        break;
-                  case SDL_MOUSEBUTTONDOWN:
-                        if(event.button.button==SDL_BUTTON_LEFT){
-                                if(menu.btn_select==5){
-                                        quitter=1;
-                                }
-                        }
-                                if(menu.btn_select==1){
-                                        indice_ecran=1;
-                                }
-
-                                if(menu.btn_select==2){
-                                        indice_ecran=2;
-                                }
-
-                                 if(menu.btn_select==3){
-                                        indice_ecran=3;
-                                }
-
-                                 if(menu.btn_select==4){
-                                        indice_ecran=4;
-                                }
-                   case SDL_KEYDOWN:
-                                if(event.key.keysym.sym==SDLK_DOWN){
-                                        menu.btn_select++;
-                                        if(menu.btn_select>5)
-                                                menu.btn_select=1;
-                                }
-                                if(event.key.keysym.sym==SDLK_UP){
-                                        menu.btn_select--;
-                                        if(menu.btn_select<1)
-                                                menu.btn_select=5;
-                                }
-
-                                if(event.key.keysym.sym==SDLK_j||(menu.btn_select==1&&event.key.keysym.sym==SDLK_RETURN)){
-                                    indice_ecran=1;    
-                                }
-
-                                if(event.key.keysym.sym==SDLK_o){
-                                       indice_ecran=2;   
-                                }
-
-                                if(event.key.keysym.sym==SDLK_m){
-                                       indice_ecran=3;   
-                                }
-
-                                if(event.key.keysym.sym==SDLK_h){
-                                       indice_ecran=4;   
-                                }
-
-                                if(event.key.keysym.sym==SDLK_q){
-                                       quitter=1;   
-                                }
-
-                   
-
-
-
-
-
-
-                        break;
-                  default:
-                  break;      
-                  }
-            }
-            //mise a jour
-            misajour_menu(&menu);
+          handle_menu_events(event, &quitter, &indice_ecran, &menu);
+          misajour_menu(&menu);
             break;
-case 1://sous menu
+case 1://sous menu joueur
         
     SDL_FillRect(Fenetre, NULL, SDL_MapRGB(Fenetre->format, 0, 0, 0)); 
     SDL_Flip(Fenetre);
