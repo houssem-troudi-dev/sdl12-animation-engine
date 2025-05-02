@@ -1,0 +1,2 @@
+Player1: c3
+Player2: c4
